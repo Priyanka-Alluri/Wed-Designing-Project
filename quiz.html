@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style> 
+        body{
+            background-image: url('ayurvedic.jpg');
+            background-size:100%;
+        }
+        .question-container {
+            display:inline-block;
+            background-color: #a47b4c;
+            border-radius: 8px;
+            box-shadow: 0px 0px 4px 3px #a47b4c;
+            padding: 20px;
+            width:600px;
+            margin:20px 50px;
+        }
+
+        /* Styles for the question text */
+        .question {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color:white;
+
+        }
+        h1{
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color:#a47b4c;
+        }
+
+        /* Styles for the choices */
+        .choice-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .choice {
+            background-color: beige;
+            border-radius: 5px;
+            font-size: 15px;
+            color:rgb(165, 79, 42);
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0s ease;
+        }
+
+        .choice.selected {
+            background-color: lightgreen;
+            box-shadow: 4px 4px 3px rgb(24, 138, 24);
+        }
+        #button1{
+            font-size:20px;
+            background-color:beige;
+            color:#a47b4c;
+            box-shadow: 2px 2px 2px #a47b4c;
+            border-radius: 3px;
+            margin-left:80px;
+        }
+        #button2{
+            font-size:20px;
+            background-color:beige;
+            color:#a47b4c;
+            box-shadow: 2px 2px 2px grey;
+            border-radius: 3px;
+            margin-left:400px;
+        }
+    </style>
+</head>
+
+<body>
+    <center><h1>Your Concern</h1></center>
+    <form id="quizForm">
+        <!-- Question container -->
+        <div class="container">
+        <div id="questionContainer"></div></div>
+        
+        <!-- Navigation buttons -->
+        <button type="button" onclick="prevQuestion()" id="button1">Previous</button>&nbsp;
+        <button type="button" onclick="nextQuestion()" id="button2">Next</button>
+    </form>
+    <script src="quiz.js"></script>
+</body>
+</html>
